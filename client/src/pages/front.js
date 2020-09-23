@@ -5,6 +5,9 @@ import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
+// import components
+import Nav from "../components/nav";
+
 // import assets
 import frontImage from '../assets/front.jpg';
 
@@ -31,12 +34,19 @@ const useStyles = makeStyles({
         fontWeight: "bold"
     },
     fullHeight: {
-        height: '100vh',
+        height: '90vh',
         width: '97vw'
     },
     nav: {
         color: 'white',
 
+    },
+    buttons: {
+        backgroundColor: 'transparent',
+        border: 'none',
+        cursor: 'pointer',
+        overflow: 'hidden',
+        outline: 'none',
     },
 });
 
@@ -44,11 +54,12 @@ function Front() {
     const classes = useStyles();
     return (
     <div className={classes.cover}>
+        <Nav />
         <Grid className={classes.fullHeight} container direction="column" justify="flex-end" alignItems="flex-end">
-            <Grid item xs={1} className={classes.navFont}>Stream</Grid>
-            <Grid item xs={1} className={classes.navFont}>Social</Grid>
-            <Grid item xs={1} className={classes.navFont}>Store</Grid>
-            <Grid item xs={1} className={classes.navFont}>Stills</Grid>
+            <button className={`${classes.navFont} ${classes.buttons}`}>Stream</button>
+            <button className={`${classes.navFont} ${classes.buttons}`}>Social</button>
+            <button className={`${classes.navFont} ${classes.buttons}`}>Store</button>
+            <button className={`${classes.navFont} ${classes.buttons}`}>Stills</button>
         </Grid>
     </div>
   );
