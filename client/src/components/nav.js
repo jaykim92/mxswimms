@@ -11,7 +11,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 
 // material-ui styling
 const useStyles = makeStyles({
-    font: {
+    white: {
         color: 'white',
     },
 });
@@ -22,9 +22,9 @@ function Nav() {
         <div>
             <AppBar position="static">
                 <Toolbar>
-                    <InstagramIcon />
-                    <TwitterIcon />
-                    <YouTubeIcon />
+                    <a href="https://www.instagram.com/mxswimms/?hl=en" className={classes.white}><InstagramIcon /></a>
+                    <a href="https://twitter.com/mxswimms" className={classes.white}><TwitterIcon /></a>
+                    <a href="https://www.youtube.com/channel/UCiogzo6md3JDO2UOkA5ciKg" className={classes.white}><YouTubeIcon /></a>
                 </Toolbar>
             </AppBar>
         </div>
