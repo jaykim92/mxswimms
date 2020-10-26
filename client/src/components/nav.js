@@ -21,7 +21,7 @@ function Nav() {
     return(
         <div>
             <AppBar position="static">
-                <Toolbar>
+                <Toolbar className={}>
                     <a href="https://www.instagram.com/mxswimms/?hl=en" className={classes.white}><InstagramIcon /></a>
                     <a href="https://twitter.com/mxswimms" className={classes.white}><TwitterIcon /></a>
                     <a href="https://www.youtube.com/channel/UCiogzo6md3JDO2UOkA5ciKg" className={classes.white}><YouTubeIcon /></a>
