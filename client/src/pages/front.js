@@ -56,7 +56,7 @@ function Front() {
     <div className={classes.cover}>
         <Nav />
         <Grid className={classes.fullHeight} container direction="column" justify="center" alignItems="flex-end">
-            <button className={`${classes.navFont} ${classes.buttons}`}>Stream</button>
+            <a onClick="location" className={`${classes.navFont} ${classes.buttons}`}>Stream</a>
             <button className={`${classes.navFont} ${classes.buttons}`}>Social</button>
             <button className={`${classes.navFont} ${classes.buttons}`}>Store</button>
             <button className={`${classes.navFont} ${classes.buttons}`}>Stills</button>
