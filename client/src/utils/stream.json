@@ -1,0 +1,12 @@
+{
+  "singles": [
+    { "album": "Together", "release": "2018", "img": "togetherCover" },
+    { "album": "Distractions", "release": "2019", "img": "distractionsCover" },
+    { "album": "Stay True", "release": "2019", "img": "stayTrueCover" },
+    { "album": "Beats to Fall in Love to", "release": "2019", "img": "bflCover" }
+  ],
+
+  "ep": [
+    {"album": "Sticky Notes", "release": "2020", "img": "stickyNotesCover" }
+  ]
+}

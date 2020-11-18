@@ -2,65 +2,140 @@
 import React from "react";
 
 // import material-ui components
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+import { makeStyles } from "@material-ui/core/styles";
+import {
+  Grid,
+  Typography,
+  Modal,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Fade
+} from "@material-ui/core";
 
 // import components
 import Nav from "../components/nav";
+import StreamModal from "../components/streamModal";
 
 // import assets
-import frontImage from '../assets/front.jpg';
+import frontImage from "../assets/front.jpg";
 
 // material-ui styling
 const useStyles = makeStyles({
-    cover: {
-        height: '100vh',
-        width: '100vw',
-        backgroundImage: `url(${frontImage})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
-    },
-    nameFont: {
-        fontFamily: "'Monoton', cursive",
-        fontSize: '36px',
-        color: 'white'
-    },
-    navFont: {
-        fontFamily: "'century-gothic', sans-serif",
-        fontSize: '18pt',
-        color: "white",
-        textAlign: "right",
-        fontWeight: "bold"
-    },
-    fullHeight: {
-        height: '90vh',
-        width: '97vw'
-    },
-    nav: {
-        color: 'white',
-
-    },
-    buttons: {
-        backgroundColor: 'transparent',
-        border: 'none',
-        cursor: 'pointer',
-        overflow: 'hidden',
-        outline: 'none',
-    },
+  cover: {
+    height: "100vh",
+    width: "100vw",
+    backgroundImage: `url(${frontImage})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat"
+  },
+  nameFont: {
+    fontFamily: "'Monoton', cursive",
+    fontSize: "36px",
+    color: "white"
+  },
+  menuStyling: {
+    height: "61vh",
+    width: "97vw"
+  },
+  nav: {
+    color: "white"
+  },
+  cards: {
+    maxWidth: 345
+  }
 });
 
 function Front() {
-    const classes = useStyles();
-    return (
+  const classes = useStyles();
+
+  // hooks
+
+  const [openSocial, setOpenSocial] = React.useState(false);
+  const handleSocialOpen = () => {
+    setOpenSocial(true);
+  };
+  const handleSocialClose = () => {
+    setOpenSocial(false);
+  };
+  const [openStills, setOpenStills] = React.useState(false);
+  const handleStillsOpen = () => {
+    setOpenStills(true);
+  };
+  const handleStillsClose = () => {
+    setOpenStills(false);
+  };
+  const [openStore, setOpenStore] = React.useState(false);
+  const handleStoreOpen = () => {
+    setOpenStore(true);
+  };
+  const handleStoreClose = () => {
+    setOpenStore(false);
+  };
+
+  // return JSX
+  return (
     <div className={classes.cover}>
-        <Nav />
-        <Grid className={classes.fullHeight} container direction="column" justify="center" alignItems="flex-end">
-            <a onClick="location" className={`${classes.navFont} ${classes.buttons}`}>Stream</a>
-            <button className={`${classes.navFont} ${classes.buttons}`}>Social</button>
-            <button className={`${classes.navFont} ${classes.buttons}`}>Store</button>
-            <button className={`${classes.navFont} ${classes.buttons}`}>Stills</button>
-        </Grid>
+      <Nav />
+      <Grid
+        className={classes.menuStyling}
+        container
+        direction="column"
+        justify="flex-end"
+        alignItems="flex-end"
+      >
+          <StreamModal />
+        <button
+          type="button"
+          onClick={handleSocialOpen}
+          className={classes.buttons}
+        >
+          <Typography className={classes.navFont}>Social</Typography>
+        </button>
+        <button
+          type="button"
+          onClick={handleStillsOpen}
+          className={classes.buttons}
+        >
+          <Typography className={classes.navFont}>Stills</Typography>
+        </button>
+        <button
+          type="button"
+          onClick={handleStoreOpen}
+          className={classes.buttons}
+        >
+          <Typography className={classes.navFont}>Store</Typography>
+        </button>
+      </Grid>
+
+
+      <Modal
+        open={openSocial}
+        onClose={handleSocialClose}
+        aria-labelledby="social-modal"
+        aria-describedby="social media"
+      >
+        <p>temporary placeholder</p>
+      </Modal>
+      <Modal
+        open={openStills}
+        onClose={handleStillsClose}
+        aria-labelledby="stills-modal"
+        aria-describedby="photos"
+      >
+        <p>temporary placeholder</p>
+      </Modal>
+      <Modal
+        open={openStore}
+        onClose={handleStoreClose}
+        aria-labelledby="store-modal"
+        aria-describedby="store"
+      >
+        <p>temporary placeholder</p>
+      </Modal>
     </div>
   );
 }
