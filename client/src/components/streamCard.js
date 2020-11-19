@@ -1,46 +1,106 @@
 // import packages
 import React from "react";
 
+// import components
+import StreamModal from "../components/streamModal";
+
+// import album info json from utils folder
+import streamInfo from "../utils/stream.json";
+
 // import material-ui components
-import { makeStyles } from "@material-ui/core/styles";
-import {
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Typography,
-  Box
-} from "@material-ui/core";
+import { makeStyles, Grid, Typography, Modal } from "@material-ui/core";
 
-
-
-const useStyles = makeStyles({
-  cards: {
+// material-ui styling
+const useStyles = makeStyles(theme => ({
+  root: {
     maxWidth: 345
+  },
+  paper: {
+    position: "absolute",
+    width: 400,
+    backgroundColor: theme.palette.background.paper,
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3)
+  },
+  fullHeight: {
+    height: "50vh"
+  },
+  modalStyling: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "scroll",
+    marginY: "auto"
+  },
+  buttons: {
+    backgroundColor: "transparent",
+    border: "none",
+    cursor: "pointer",
+    overflow: "hidden",
+    outline: "none"
+  },
+  navFont: {
+    fontFamily: "'century-gothic', sans-serif",
+    fontSize: "16pt",
+    color: "black",
+    textAlign: "right",
+    textTransform: "uppercase",
+    fontWeight: "bold"
+  },
+  gridStyling: {
+    outline: "none",
+    width: "65vw"
   }
-});
+}));
 
-function StreamCard({ data }) {
+function StreamCard() {
+  // material ui custom css
   const classes = useStyles();
+
+  //hooks
+  const [openStream, setOpenStream] = React.useState(false);
+  const handleStreamOpen = () => {
+    setOpenStream(true);
+  };
+  const handleStreamClose = () => {
+    setOpenStream(false);
+  };
+
+  // jsx
   return (
-    <Box display="flex" alignItems="center">
-      <Card className={classes.cards}>
-        <CardActionArea>
-          <CardMedia />
-          <CardContent>
-            <Typography variant="h5">hello</Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-    </Box>
+    <>
+      <button
+        type="button"
+        onClick={handleStreamOpen}
+        className={classes.buttons}
+      >
+        <Typography className={classes.navFont}>Stream</Typography>
+      </button>
+
+      <Modal
+        open={openStream}
+        onClose={handleStreamClose}
+        aria-labelledby="stream-modal"
+        aria-describedby="discography"
+        className={classes.modalStyling}
+      >
+        <>
+          <Grid
+            container
+            spacing={4}
+            direction="row"
+            justify="center"
+            alignItems="center"
+            className={classes.gridStyling}
+          >
+            {streamInfo.map((item, i) => (
+              <StreamModal key={i} data={item} />
+            ))}
+          </Grid>
+        </>
+      </Modal>
+    </>
   );
 }
 
 export default StreamCard;
-
-
-
-// {stream.singles.map((item, i) => (
-//     <StreamCard data={item} key={i} />
-//   ))}

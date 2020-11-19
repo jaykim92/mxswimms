@@ -17,7 +17,7 @@ import {
 
 // import components
 import Nav from "../components/nav";
-import StreamModal from "../components/streamModal";
+import StreamCard from "../components/streamCard";
 
 // import assets
 import frontImage from "../assets/front.jpg";
@@ -37,15 +37,15 @@ const useStyles = makeStyles({
     fontSize: "36px",
     color: "white"
   },
-  menuStyling: {
-    height: "61vh",
-    width: "97vw"
-  },
   nav: {
     color: "white"
   },
   cards: {
     maxWidth: 345
+  },
+  menuStyling: {
+    height: "61vh",
+    width: "97vw"
   }
 });
 
@@ -87,7 +87,7 @@ function Front() {
         justify="flex-end"
         alignItems="flex-end"
       >
-          <StreamModal />
+          <StreamCard />
         <button
           type="button"
           onClick={handleSocialOpen}

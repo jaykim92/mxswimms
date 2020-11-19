@@ -1,12 +1,7 @@
-{
-  "singles": [
-    { "album": "Together", "release": "2018", "img": "togetherCover" },
-    { "album": "Distractions", "release": "2019", "img": "distractionsCover" },
-    { "album": "Stay True", "release": "2019", "img": "stayTrueCover" },
-    { "album": "Beats to Fall in Love to", "release": "2019", "img": "bflCover" }
-  ],
-
-  "ep": [
-    {"album": "Sticky Notes", "release": "2020", "img": "stickyNotesCover" }
-  ]
-}
+[
+    {"album": "Sticky Notes", "release": "2020", "img": "sticky_notes.jpeg" },
+    { "album": "Beats to Fall in Love to", "release": "2019", "img": "bfl_cover.jpeg" },
+    { "album": "Distractions", "release": "2019", "img": "distractions_cover.jpeg" },
+    { "album": "Stay True", "release": "2019", "img": "stay_true_cover.jpeg" },
+    { "album": "Together", "release": "2018", "img": "together_cover.jpeg" }
+]
