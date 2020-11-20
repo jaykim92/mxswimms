@@ -24,6 +24,13 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center",
     backgroundColor: "transparent",
     boxShadow: "none"
+  },
+  musicIcons: {
+    height: 25,
+    width: 25
+  },
+  cardActionStyling: {
+    justifyContent: "center"
   }
 }));
 
@@ -42,8 +49,35 @@ function StreamModal({ data }) {
           image={require(`../assets/${data.img}`)}
           className={classes.mediaStyling}
         />
-        <CardActions>
-          <button>itunes</button>
+        <CardActions className={classes.cardActionStyling}>
+          <a href={data.itunes} target="_blank" rel="noopener noreferrer">
+            <img
+              src={require("../assets/itunes_logo.svg")}
+              alt="itunes logo"
+              className={classes.musicIcons}
+            ></img>
+          </a>
+          <a href={data.spotify} target="_blank" rel="noopener noreferrer">
+            <img
+              src={require("../assets/spotify_logo.svg")}
+              alt="spotify logo"
+              className={classes.musicIcons}
+            ></img>
+          </a>
+          <a href={data.tidal} target="_blank" rel="noopener noreferrer">
+            <img
+              src={require("../assets/tidal_logo.svg")}
+              alt="tidal logo"
+              className={classes.musicIcons}
+            ></img>
+          </a>
+          <a href={data.amazon} target="_blank" rel="noopener noreferrer">
+            <img
+              src={require("../assets/amazon_logo.svg")}
+              alt="amazon logo"
+              className={classes.musicIcons}
+            ></img>
+          </a>
         </CardActions>
       </Card>
     </Grid>
