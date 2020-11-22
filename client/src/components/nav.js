@@ -16,8 +16,8 @@ const useStyles = makeStyles({
     color: "black"
   },
   background: {
-      background: "transparent",
-      boxShadow: "none"
+    background: "transparent",
+    boxShadow: "none"
   }
 });
 
@@ -32,12 +32,20 @@ function Nav() {
               <a
                 href="https://www.instagram.com/mxswimms/?hl=en"
                 className={classes.black}
+                target="_blank"
+                rel="noopener noreferrer"
+                s
               >
                 <InstagramIcon />
               </a>
             </Grid>
             <Grid item>
-              <a href="https://twitter.com/mxswimms" className={classes.black}>
+              <a
+                href="https://twitter.com/mxswimms"
+                className={classes.black}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <TwitterIcon />
               </a>
             </Grid>
@@ -45,6 +53,8 @@ function Nav() {
               <a
                 href="https://www.youtube.com/channel/UCiogzo6md3JDO2UOkA5ciKg"
                 className={classes.black}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <YouTubeIcon />
               </a>

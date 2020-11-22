@@ -5,11 +5,8 @@ import React from "react";
 import {
   makeStyles,
   Grid,
-  Typography,
   Card,
-  CardActionArea,
   CardActions,
-  CardContent,
   CardMedia
 } from "@material-ui/core";
 

@@ -3,21 +3,13 @@ import React from "react";
 
 // import material-ui components
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  Grid,
-  Typography,
-  Modal,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Fade
-} from "@material-ui/core";
+import { Grid, Typography, Modal } from "@material-ui/core";
 
 // import components
 import Nav from "../components/nav";
-import StreamCard from "../components/streamCard";
+import StreamButton from "../components/streamButton";
+import SocialsButton from "../components/socialsButton";
+import StillsButton from "../components/stillsButton";
 
 // import assets
 import frontImage from "../assets/front.jpg";
@@ -32,20 +24,24 @@ const useStyles = makeStyles({
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat"
   },
-  nameFont: {
-    fontFamily: "'Monoton', cursive",
-    fontSize: "36px",
-    color: "white"
-  },
-  nav: {
-    color: "white"
-  },
-  cards: {
-    maxWidth: 345
-  },
   menuStyling: {
     height: "61vh",
     width: "97vw"
+  },
+  buttons: {
+    backgroundColor: "transparent",
+    border: "none",
+    cursor: "pointer",
+    overflow: "hidden",
+    outline: "none"
+  },
+  navFont: {
+    fontFamily: "'century-gothic', sans-serif",
+    fontSize: "16pt",
+    color: "black",
+    textAlign: "right",
+    textTransform: "uppercase",
+    fontWeight: "bold"
   }
 });
 
@@ -60,13 +56,6 @@ function Front() {
   };
   const handleSocialClose = () => {
     setOpenSocial(false);
-  };
-  const [openStills, setOpenStills] = React.useState(false);
-  const handleStillsOpen = () => {
-    setOpenStills(true);
-  };
-  const handleStillsClose = () => {
-    setOpenStills(false);
   };
   const [openStore, setOpenStore] = React.useState(false);
   const handleStoreOpen = () => {
@@ -87,20 +76,16 @@ function Front() {
         justify="flex-end"
         alignItems="flex-end"
       >
-          <StreamCard />
+        <StreamButton />
+        <SocialsButton />
+        <StillsButton />
+
         <button
           type="button"
           onClick={handleSocialOpen}
           className={classes.buttons}
         >
-          <Typography className={classes.navFont}>Social</Typography>
-        </button>
-        <button
-          type="button"
-          onClick={handleStillsOpen}
-          className={classes.buttons}
-        >
-          <Typography className={classes.navFont}>Stills</Typography>
+          <Typography className={classes.navFont}>Schedule</Typography>
         </button>
         <button
           type="button"
@@ -111,7 +96,6 @@ function Front() {
         </button>
       </Grid>
 
-
       <Modal
         open={openSocial}
         onClose={handleSocialClose}
@@ -120,14 +104,7 @@ function Front() {
       >
         <p>temporary placeholder</p>
       </Modal>
-      <Modal
-        open={openStills}
-        onClose={handleStillsClose}
-        aria-labelledby="stills-modal"
-        aria-describedby="photos"
-      >
-        <p>temporary placeholder</p>
-      </Modal>
+
       <Modal
         open={openStore}
         onClose={handleStoreClose}

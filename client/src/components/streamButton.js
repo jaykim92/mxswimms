@@ -2,7 +2,7 @@
 import React from "react";
 
 // import components
-import StreamModal from "../components/streamModal";
+import StreamModal from "./streamModal";
 
 // import album info json from utils folder
 import streamInfo from "../utils/stream.json";
@@ -12,25 +12,11 @@ import { makeStyles, Grid, Typography, Modal } from "@material-ui/core";
 
 // material-ui styling
 const useStyles = makeStyles(theme => ({
-  root: {
-    maxWidth: 345
-  },
-  paper: {
-    position: "absolute",
-    width: 400,
-    backgroundColor: theme.palette.background.paper,
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3)
-  },
-  fullHeight: {
-    height: "50vh"
-  },
   modalStyling: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    overflow: "scroll",
-    marginY: "auto"
+    overflow: "scroll"
   },
   buttons: {
     backgroundColor: "transparent",
@@ -53,7 +39,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function StreamCard() {
+function StreamButton() {
   // material ui custom css
   const classes = useStyles();
 
@@ -84,7 +70,6 @@ function StreamCard() {
         aria-describedby="discography"
         className={classes.modalStyling}
       >
-        <>
           <Grid
             container
             spacing={4}
@@ -97,10 +82,9 @@ function StreamCard() {
               <StreamModal key={i} data={item} />
             ))}
           </Grid>
-        </>
       </Modal>
     </>
   );
 }
 
-export default StreamCard;
+export default StreamButton;
