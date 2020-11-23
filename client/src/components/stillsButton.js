@@ -32,6 +32,11 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     justifyContent: "center",
     overflow: "scroll"
+  },
+  gridStyling: {
+    outline: 0,
+    maxWidth: "70%",
+    maxHeight: "100%"
   }
 }));
 
@@ -66,7 +71,13 @@ function StillsButton({ data }) {
         aria-describedby="photos"
         className={classes.modalStyling}
       >
-        <Grid container justify="center">
+        <Grid
+          container
+          justify="flex-start"
+          alignItems="center"
+          direction="column"
+          className={classes.gridStyling}
+        >
           {stillInfo.map((item, i) => (
             <StillsModal key={i} data={item} />
           ))}

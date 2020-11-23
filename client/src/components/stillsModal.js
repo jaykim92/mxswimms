@@ -2,26 +2,31 @@
 import React from "react";
 
 // import material-ui components
-import { makeStyles, Grid } from "@material-ui/core";
+import { makeStyles, Grid, Card, CardMedia } from "@material-ui/core";
 
 // material-ui styling
 const useStyles = makeStyles(theme => ({
-  imageStyling: {
-    width: "70vw",
-    outline: 0
-  }
+    cardStyling: {
+        maxWidth: "100%"
+    }
 }));
 
-function StillsModal({data}) {
-    // material-ui custom css
-    const classes = useStyles();
+function StillsModal({ data }) {
+  // material-ui custom css
+  const classes = useStyles();
 
-    // jsx
-    return (
-        <Grid item>
-            <img src={require(`../assets/${data.still}`)} className={classes.imageStyling}></img>
-        </Grid>
-    );
-};
+  // jsx
+  return (
+    <Grid item xs={12}>
+      <Card className={classes.cardStyling}>
+        <CardMedia
+          component="img"
+          alt="mx.swimms self portraits"
+          image={require(`../assets/${data.still}`)}
+        />
+      </Card>
+    </Grid>
+  );
+}
 
 export default StillsModal;

@@ -34,8 +34,9 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "bold"
   },
   gridStyling: {
-    outline: "none",
-    width: "65vw"
+    width: "65vw",
+    outline: 0,
+    maxHeight: "100%"
   }
 }));
 
