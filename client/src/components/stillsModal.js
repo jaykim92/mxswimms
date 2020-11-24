@@ -17,8 +17,8 @@ function StillsModal({ data }) {
 
   // jsx
   return (
-    <Grid item xs={12}>
-      <Card className={classes.cardStyling}>
+    <Grid item className={classes.cardStyling}>
+      <Card>
         <CardMedia
           component="img"
           alt="mx.swimms self portraits"
