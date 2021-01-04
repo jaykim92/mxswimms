@@ -10,6 +10,7 @@ import Nav from "../components/nav";
 import StreamButton from "../components/streamButton";
 import SocialsButton from "../components/socialsButton";
 import StillsButton from "../components/stillsButton";
+import ScheduleButton from "../components/scheduleButton";
 
 // import assets
 import frontImage from "../assets/front.jpg";
@@ -49,14 +50,6 @@ function Front() {
   const classes = useStyles();
 
   // hooks
-
-  const [openSocial, setOpenSocial] = React.useState(false);
-  const handleSocialOpen = () => {
-    setOpenSocial(true);
-  };
-  const handleSocialClose = () => {
-    setOpenSocial(false);
-  };
   const [openStore, setOpenStore] = React.useState(false);
   const handleStoreOpen = () => {
     setOpenStore(true);
@@ -77,16 +70,11 @@ function Front() {
         alignItems="flex-end"
       >
         <StreamButton />
-        <SocialsButton />
         <StillsButton />
+        <ScheduleButton />
+        <SocialsButton />
 
-        <button
-          type="button"
-          onClick={handleSocialOpen}
-          className={classes.buttons}
-        >
-          <Typography className={classes.navFont}>Schedule</Typography>
-        </button>
+
         <button
           type="button"
           onClick={handleStoreOpen}
@@ -95,15 +83,6 @@ function Front() {
           <Typography className={classes.navFont}>Store</Typography>
         </button>
       </Grid>
-
-      <Modal
-        open={openSocial}
-        onClose={handleSocialClose}
-        aria-labelledby="social-modal"
-        aria-describedby="social media"
-      >
-        <p>temporary placeholder</p>
-      </Modal>
 
       <Modal
         open={openStore}

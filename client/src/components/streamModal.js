@@ -37,7 +37,7 @@ function StreamModal({ data }) {
 
   // return jsx
   return (
-    <Grid item xs={12} sm={6} md={4}>
+    <Grid item xs={12} sm={6} md={4} lg={3}>
       <Card className={classes.cards}>
         <CardMedia
           component="img"

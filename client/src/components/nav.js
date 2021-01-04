@@ -2,10 +2,7 @@
 import React from "react";
 
 // import material-ui components
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, Grid, Toolbar, AppBar } from "@material-ui/core";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -34,7 +31,6 @@ function Nav() {
                 className={classes.black}
                 target="_blank"
                 rel="noopener noreferrer"
-                s
               >
                 <InstagramIcon />
               </a>
