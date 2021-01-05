@@ -10,12 +10,12 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 // material-ui styling
 const useStyles = makeStyles({
   black: {
-    color: "black"
+    color: "black",
   },
   background: {
     background: "transparent",
-    boxShadow: "none"
-  }
+    boxShadow: "none",
+  },
 });
 
 function Nav() {

@@ -37,8 +37,8 @@ const useStyles = makeStyles(theme => ({
     width: "40vw",
     outline: 0,
     height: "70vh",
-    overflow: "scroll",
-    background: "rgba(255,255,255,0.9)"
+    overflow: "hide",
+    background: "rgba(255,255,255,0.7)"
   }
 }));
 
