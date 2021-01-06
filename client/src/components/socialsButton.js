@@ -2,7 +2,7 @@
 import React from "react";
 
 // import material-ui components
-import { makeStyles, Grid, Typography, Modal } from "@material-ui/core";
+import { makeStyles, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   buttons: {

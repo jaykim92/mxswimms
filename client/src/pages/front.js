@@ -3,7 +3,7 @@ import React from "react";
 
 // import material-ui components
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Typography, Modal } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 // import components
 import Nav from "../components/nav";
@@ -49,14 +49,7 @@ const useStyles = makeStyles({
 function Front() {
   const classes = useStyles();
 
-  // hooks
-  const [openStore, setOpenStore] = React.useState(false);
-  const handleStoreOpen = () => {
-    setOpenStore(true);
-  };
-  const handleStoreClose = () => {
-    setOpenStore(false);
-  };
+
 
   // return JSX
   return (
@@ -73,25 +66,7 @@ function Front() {
         <StillsButton />
         <ScheduleButton />
         <SocialsButton />
-
-
-        <button
-          type="button"
-          onClick={handleStoreOpen}
-          className={classes.buttons}
-        >
-          <Typography className={classes.navFont}>Store</Typography>
-        </button>
       </Grid>
-
-      <Modal
-        open={openStore}
-        onClose={handleStoreClose}
-        aria-labelledby="store-modal"
-        aria-describedby="store"
-      >
-        <p>temporary placeholder</p>
-      </Modal>
     </div>
   );
 }
