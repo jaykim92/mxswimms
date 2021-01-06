@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "transparent",
     border: "none",
     cursor: "pointer",
-    overflow: "hidden",
+    overflow: "hide",
     outline: "none"
   },
   navFont: {

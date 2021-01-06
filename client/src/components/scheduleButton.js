@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    overflow: "scroll"
+    overflow: "hide"
   },
   buttons: {
     backgroundColor: "transparent",
@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     width: "40vw",
     outline: 0,
     height: "70vh",
-    overflow: "hide",
+    overflowY: "scroll",
     background: "rgba(255,255,255,0.7)"
   }
 }));
