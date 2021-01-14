@@ -24,13 +24,13 @@ Click **[here](http://mxswimms.herokuapp.com/)** for deployed application or vis
 ## Usage
 **Navbar**<br/>
 * Clicking icons from left to right will redirect you to Instagram, Twitter, and YouTube.<br/>
-**Stream**
+**Stream**<br/>
 * Clicking on the "Stream" button will open up a modal displaying the artist's updated discography.<br/>
-**Stills**
+**Stills**<br/>
 * Clicking on the "Stills" button will open up a modal displaying a gallery of photos.<br/>
-**Schedule**
+**Schedule**<br/>
 * Clicking on the "Schedule" button will open up a modal displaying upcoming tour dates, the location, and the venue.<br/>
-**Socials**
+**Socials**<br/>
 * Clicking on the "Socials" button will redirect you to the artist's linktree, which hosts streaming sites as well as social media accounts.<br/>
 
 ## License
