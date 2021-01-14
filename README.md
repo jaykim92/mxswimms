@@ -13,9 +13,15 @@ Click **[here](http://mxswimms.herokuapp.com/)** for deployed application
 * [Usage](#usage)
 * [License](#license)
 
+<br/>
+
 ## Screenshots
 
+<br/>
+
 ## Tech/framework used
+
+<br/>
 
 ## Usage
 **Navbar**
@@ -27,5 +33,7 @@ Click **[here](http://mxswimms.herokuapp.com/)** for deployed application
 **Schedule**
 
 **Socials**
+
+<br/>
 
 ## License
