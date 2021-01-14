@@ -20,6 +20,8 @@ Click **[here](http://mxswimms.herokuapp.com/)** for deployed application
 <br/>
 
 ## Tech/framework used
+* React
+* Material-UI
 
 <br/>
 
