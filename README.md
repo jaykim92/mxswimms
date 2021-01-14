@@ -22,7 +22,7 @@ Click **[here](http://mxswimms.herokuapp.com/)** for deployed application or vis
 <br/>
 
 ## Usage
-**Navbar**
+**Navbar**<br/>
 * Clicking icons from left to right will redirect you to Instagram, Twitter, and YouTube.<br/>
 **Stream**
 * Clicking on the "Stream" button will open up a modal displaying the artist's updated discography.<br/>
