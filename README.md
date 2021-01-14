@@ -3,7 +3,7 @@ Mx.Swimms
 
 ## Motivation
 This site was created to showcase music artist Mx.Swimms's discography, photos, tour schedule, and links to social media accounts.
-Click **[here](http://mxswimms.herokuapp.com/)** for deployed application
+Click **[here](http://mxswimms.herokuapp.com/)** for deployed application or visit https://mxswimms.herokuapp.com
 <br/>
 
 ## Table of Contents
