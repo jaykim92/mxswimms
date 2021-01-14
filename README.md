@@ -27,11 +27,10 @@ Click **[here](http://mxswimms.herokuapp.com/)** for deployed application or vis
 <br/>
 * Clicking icons from left to right will redirect you to Instagram, Twitter, and YouTube.
 <br/>
-
 **Stream**
 <br/>
-* Clicking on the "Stream" button will open up a modal displaying the artist's updated discography.<br/>
-
+* Clicking on the "Stream" button will open up a modal displaying the artist's updated discography.
+<br/>
 **Stills**<br/>
 * Clicking on the "Stills" button will open up a modal displaying a gallery of photos.<br/>
 **Schedule**<br/>
