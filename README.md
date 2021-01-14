@@ -1,9 +1,11 @@
 # Project Title
-Mx.Swimms Website
+Mx.Swimms
 
 ## Motivation
-This website was created to showcase music artist Mx.Swimms's discography, photos, tour schedule, and links to social media accounts.
+This site was created to showcase music artist Mx.Swimms's discography, photos, tour schedule, and links to social media accounts.
 Click **[here](http://mxswimms.herokuapp.com/)** for deployed application
+
+<br/>
 
 ## Table of Contents
 * [Screenshots](#screenshots)
@@ -16,5 +18,14 @@ Click **[here](http://mxswimms.herokuapp.com/)** for deployed application
 ## Tech/framework used
 
 ## Usage
+**Navbar**
+
+**Stream**
+
+**Stills**
+
+**Schedule**
+
+**Socials**
 
 ## License
