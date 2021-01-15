@@ -7,13 +7,9 @@ Click **[here](http://mxswimms.herokuapp.com/)** for deployed application or vis
 <br/>
 
 ## Table of Contents
-* [Screenshots](#screenshots)
 * [Tech/framework used](#tech/framework-used)
 * [Usage](#usage)
 * [License](#license)
-<br/>
-
-## Screenshots
 <br/>
 
 ## Tech/framework used
