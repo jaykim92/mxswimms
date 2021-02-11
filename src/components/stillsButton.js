@@ -30,13 +30,13 @@ const useStyles = makeStyles(theme => ({
   modalStyling: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "center",
-    overflowY: "scroll"
+    justifyContent: "center"
   },
   gridStyling: {
     outline: 0,
     maxWidth: "80vw",
-    maxHeight: "100%"
+    maxHeight: "100%",
+    overflowY: "scroll"
   }
 }));
 
